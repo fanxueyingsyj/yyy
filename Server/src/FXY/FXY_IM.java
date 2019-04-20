@@ -75,7 +75,7 @@ public class FXY_IM {
 		//因为如果我以后想要更改输出格式，比如说再多输出个时间
 		//只需要更改这一个方法就可以
 		public void PrintMsg(String m) {
-			System.out.println("["+ClientSocket.getInetAddress()+"]: "+m);
+			System.out.println("【"+ClientSocket.getInetAddress()+"】: "+m);
 		}
 		
 		public void SendMsg(String m) {
