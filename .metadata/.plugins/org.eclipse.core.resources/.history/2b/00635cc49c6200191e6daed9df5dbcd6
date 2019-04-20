@@ -1,0 +1,22 @@
+package FXY;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class FXY_IM {
+
+	public static void main(String[] args) {
+		try {
+			ServerSocket listener = new ServerSocket(59090);
+			System.out.println("The IM server is running...");
+			while (true) {
+	            Socket socket = listener.accept();
+	            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+	            out.println("欢迎你！");//我们老师说必须要加异常处理，不然就会报错
+			}
+		}
+		catch(Exception ex) {
+			System.out.println(ex.toString());
+		}
+	}
+}

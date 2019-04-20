@@ -1,0 +1,19 @@
+package FXY;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class FXY_IM {
+
+	public static void main(String[] args) {
+		ServerSocket listener = new ServerSocket(59090);
+		System.out.println("The IM server is running...");
+		while (true) {
+            try (Socket socket = listener.accept()) {
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+                out.println("»¶Ó­Äã£¡");
+            }
+	
+	}
+
+}
